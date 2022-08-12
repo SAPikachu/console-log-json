@@ -34,7 +34,7 @@
     "audit": "../../bin/npm-audit.sh",
     "prepublishOnly": "npm run clean && npm run install:prod && npm run build && npm run test && npm run prune:prod",
     "preversion": "npm run build && npm run test",
-    "install": "[ ! -d dist ] && npm run prepublishOnly",
+    "install": "[ ! -d dist ] && npm run build",
     "format:prettier": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "install:prod": "npm ci",
